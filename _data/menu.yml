@@ -9,6 +9,8 @@ entries:
         url: https://github.com/kssajith
       - title: linked-in
         url: https://www.linkedin.com/in/kssajith/
+      - title: resume
+        url: "/assets/pdfs/Resume.pdf"
       # - title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
 
   # - title: all posts
