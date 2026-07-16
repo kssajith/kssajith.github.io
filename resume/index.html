@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sajith K S – Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap">
+  <style>/* ============================================================
+   RESET
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   SCREEN WRAPPER — shows page as a white card on grey
+   ============================================================ */
+body {
+  background: #d8d8d8;
+  padding: 28px 0 40px;
+}
+
+.page {
+  font-family: Calibri, 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.38;
+  color: #111111;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 19mm 22mm 20mm 22mm;
+  background: #ffffff;
+  box-shadow: 0 3px 28px rgba(0, 0, 0, 0.22);
+}
+
+/* ============================================================
+   HEADER — name + contact
+   ============================================================ */
+.resume-header {
+  margin-bottom: 9pt;
+}
+
+.resume-name {
+  font-family: 'EB Garamond', Garamond, Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 40pt;
+  line-height: 1.05;
+  letter-spacing: -0.3px;
+  color: #23B8DC;
+  margin-bottom: 3pt;
+}
+
+.resume-contact {
+  font-size: 10pt;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.resume-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================================================
+   SUMMARY
+   ============================================================ */
+.resume-summary {
+  margin-bottom: 2pt;
+}
+
+.resume-summary p {
+  font-size: 11pt;
+  line-height: 1.4;
+  text-indent: 1.6em;
+}
+
+/* ============================================================
+   SECTION TITLES  (PROFESSIONAL EXPERIENCE, SKILLS, EDUCATION)
+   ============================================================ */
+.section-title {
+  font-family: Calibri, 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666666;
+  margin-top: 11pt;
+  margin-bottom: 5pt;
+}
+
+/* ============================================================
+   JOB ENTRIES
+   ============================================================ */
+.job {
+  margin-bottom: 7pt;
+}
+
+.job-header {
+  font-size: 11pt;
+  line-height: 1.38;
+  margin-bottom: 3pt;
+}
+
+.job-header-bold {
+  font-weight: bold;
+}
+
+/* ============================================================
+   BULLET LISTS
+   ============================================================ */
+.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bullets > li {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 2.5pt;
+  font-size: 11pt;
+  line-height: 1.38;
+  padding-left: 3pt;
+}
+
+.bullet-marker {
+  flex-shrink: 0;
+  min-width: 0.65em;
+  user-select: none;
+}
+
+.bullet-content {
+  flex: 1;
+}
+
+/* ============================================================
+   SUB-BULLETS  (used for Coinome nested items)
+   ============================================================ */
+.subbullets {
+  list-style: none;
+  padding: 0;
+  margin: 2pt 0 0 0;
+}
+
+.subbullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 2pt;
+  font-size: 11pt;
+  line-height: 1.35;
+  padding-left: 2pt;
+}
+
+.subbullets li::before {
+  content: "-";
+  flex-shrink: 0;
+  min-width: 0.65em;
+  color: #444;
+}
+
+/* ============================================================
+   TECH STACK COLOR  (text inside parentheses)
+   ============================================================ */
+.tech {
+  color: #666666;
+}
+
+/* ============================================================
+   SKILLS TABLE — aligned colons
+   ============================================================ */
+.skills-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.skills-table td {
+  padding: 1.5pt 0;
+  vertical-align: top;
+  font-size: 11pt;
+  line-height: 1.38;
+}
+
+.skill-dash {
+  width: 1.1em;
+  padding-right: 2pt;
+}
+
+.skill-label {
+  white-space: nowrap;
+  font-weight: normal;
+}
+
+.skill-colon {
+  padding: 0 5pt;
+  white-space: nowrap;
+}
+
+.skill-items {
+  /* wraps naturally */
+}
+
+/* ============================================================
+   EDUCATION
+   ============================================================ */
+.education-entry {
+  font-size: 11pt;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   DOWNLOAD BUTTON — screen only, hidden in print/PDF
+   ============================================================ */
+.download-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 18px;
+  font-family: Calibri, 'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10.5pt;
+  font-weight: bold;
+  color: #ffffff;
+  background: #23B8DC;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.22);
+  transition: background 0.15s ease;
+}
+
+.download-btn:hover {
+  background: #1aa0c2;
+}
+
+/* ============================================================
+   PRINT  — matches A4 PDF output
+   ============================================================ */
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+
+  .download-btn {
+    display: none;
+  }
+
+  .page {
+    width: 100%;
+    min-height: unset;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  @page {
+    size: A4;
+    margin: 18mm 20mm;
+  }
+
+  .job {
+    break-inside: avoid;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
+</style>
+</head>
+<body>
+  <a class="download-btn" href="ResumeSajithKS.pdf" download>Download PDF</a>
+
+  <div class="page">
+
+    <header class="resume-header">
+      <h1 class="resume-name">Sajith K S</h1>
+      <div class="resume-contact">+91 9995338774 | <a href="mailto:mail2sajithks@gmail.com">mail2sajithks@gmail.com</a></div>
+      <div class="resume-contact">Kandasseril (H), South Paravoor (PO), Ernakulam, Kerala, 682 307</div>
+    </header>
+
+    <div class="resume-summary">
+      <p>Experienced fintech team lead with 14+ years of experience in building critical, large-scale payment projects, specializing in Java/Kotlin (Spring Boot) and TypeScript (React).</p>
+    </div>
+
+    <section>
+      <h2 class="section-title">Professional Experience</h2>
+      
+  <div class="job">
+    <div class="job-header"><span class="job-header-bold">Lead Engineer at Hatio Innovations (BillDesk), </strong>Kochi, Kerala (November 2019 – Present)</div>
+    <ul class="bullets">
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><strong><em>UPI Plugin</em></strong>: Implemented in-app UPI payments SDK which boosted payment success rates by 3x and delivered better UX for more than 270 million BHIM users by reducing a 5-step transaction into 2-steps by eliminating the traditional intent based UPI payment flow. (<span class="tech">Spring Boot, Oracle</span>)</div></li>
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><em>Payment Router/Orchestrator</em>: Implemented a rule based request routing engine inside payment gateway system achieved 150 requests per second throughput by faster processing of previous transactions, predefined rules, and characteristics of the incoming request. Attained 95% code review compliance, and reduced critical bugs. (<span class="tech">Spring Boot, Aerospike, Kafka</span>)</div></li>
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><em>Token Aggregator Solution</em>: Designed and developed a single window system to manage payment tokens associated with user payment cards. The system can eventually handle 107.7 crore cards issued in India by connecting the card issuing banks and networks. (<span class="tech">Spring Boot, React, Oracle, Aerospike</span>)</div></li>
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><strong><em>Coinome (Crypto Exchange)</em></strong>: 
+        <ul class="subbullets">
+        <li><div class="bullet-content">Built Coinome mobile app (<span class="tech">React Native, TypeScript</span>)</div></li>
+        <li><div class="bullet-content">Built Price Action Streaming Service (<span class="tech">Kafka, NodeJS</span>)</div></li>
+        <li><div class="bullet-content">Built Portfolio Data Streamer (<span class="tech">Spring Boot, Kafka</span>)</div></li>
+        <li><div class="bullet-content">Implemented Stop Limit Order module (<span class="tech">Spring Boot, PostgreSQL</span>)</div></li>
+        <li><div class="bullet-content">Restructured Coinome API module (<span class="tech">Spring Boot</span>)</div></li>
+        </ul></div></li>
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><em>Payment Gateway Onboarding Portal</em>: Developed a web app for customer onboarding to a payment gateway. (<span class="tech">Spring Boot, Kotlin, PostgreSQL</span>)</div></li>
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><em>Payouts Ops Portal</em>: Backend system validating final transaction states by comparing live transaction data and logs. (<span class="tech">Spring Boot, Reactive Programming</span>)</div></li>
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><em>Bank Proxy Service</em>: Backend development for proxy services for bank APIs used across multiple in-house products. (<span class="tech">Spring Boot, Kotlin</span>)</div></li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-header-bold">Senior Software Engineer at MobMe Wireless Solutions Ltd., </strong>Kochi, Kerala (May 2016 – June 2019)</div>
+    <ul class="bullets">
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><strong><em>Vodafone Heart Beat</em></strong>: Backend Engineer for a survey-based customer service experience product handling 6–8 lakh transactions/day. (<span class="tech">Ruby on Rails, PostgreSQL, Elasticsearch</span>)</div></li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-header-bold">Senior Software Engineer at QBurst Technologies, </strong>Kochi, Kerala (July 2014 – May 2016)</div>
+    <ul class="bullets">
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><strong><em>RedBook</em></strong>: Developed APIs for an aviation pricing project. Developed APIs and background workers for flight pricing data ingestion. (<span class="tech">Ruby on Rails, PostgreSQL</span>)</div></li>
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><strong><em>PQBIds Portal</em></strong>: Developed backend APIs for mobile apps enrolling citizens for a government agency to submit bids with event-based notifications. (<span class="tech">Ruby on Rails, PostgreSQL</span>)</div></li>
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><strong><em>F1rst Dashboard</em></strong>: Developed an admin panel to visualize customer activity statistics and reports, and user activity tracking using Mixpanel. (<span class="tech">Ruby, Ruby on Rails, MongoDB</span>)</div></li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-header-bold">Software Engineer at MobMe Wireless Solutions Ltd., </strong>Kochi, Kerala (April 2012 – June 2014)</div>
+    <ul class="bullets">
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><strong><em>Online Complaint Registration System</em></strong>: Developed a web portal for a State Transport Department in India. (<span class="tech">Ruby on Rails, Redis, PostgreSQL</span>)</div></li>
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><strong><em>Telecom Value Added Services</em></strong>: Developed APIs and maintained Centralized Billing Engine, WAP, USSD, and SMS-based mVAS products for a leading telecom service provider in India. (<span class="tech">Ruby on Rails, MySQL, PHP, Symfony</span>)</div></li>
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><strong><em>Exam Results through SMS</em></strong>: Delivered public exam results for 5+ lakh students via SMS. (<span class="tech">Ruby, Sinatra</span>)</div></li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header"><span class="job-header-bold">Software Engineer at Media Systems India Soft Solutions</strong> (July 2011 – April 2012)</div>
+    <ul class="bullets">
+      <li><span class="bullet-marker">-</span><div class="bullet-content"><strong><em>EBilling Online</em></strong>: Developed partner onboarding feature and updated recon processing feature to accommodate a new recon file format for leading US pharmacy consultant firm's project. (<span class="tech">C#, .NET, MSSQL</span>)</div></li>
+    </ul>
+  </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Skills</h2>
+      <table class="skills-table"><tbody>
+    <tr><td class="skill-dash">–</td><td class="skill-label">Languages / Frameworks</td><td class="skill-colon">:</td><td class="skill-items">Java, Kotlin, Ruby, TypeScript, Ruby on Rails, Spring Boot, React Native, React, JavaScript, awk, Bash, CSS, Sinatra</td></tr>
+    <tr><td class="skill-dash">–</td><td class="skill-label">Database Systems</td><td class="skill-colon">:</td><td class="skill-items">PostgreSQL, Oracle DB, Redis, Aerospike, Elasticsearch</td></tr>
+    <tr><td class="skill-dash">–</td><td class="skill-label">Soft Skills</td><td class="skill-colon">:</td><td class="skill-items">Team Leadership, Agile Processes, Technical Mentoring, Technical Support (DevOps, Client, QA)</td></tr>
+  </tbody></table>
+    </section>
+
+    <section>
+      <h2 class="section-title">Education</h2>
+      <p class="education-entry">Bachelor of Technology in Computer Science and Engineering, Mahatma Gandhi University, Kottayam, Kerala.</p>
+    </section>
+
+  </div>
+</body>
+</html>
